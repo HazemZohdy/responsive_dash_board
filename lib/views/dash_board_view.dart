@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/widgets/all_expanses.dart';
+import 'package:responsive_dash_board/widgets/all_expenses_item_model.dart';
 import '../widgets/custom_drawer.dart';
 
 class DashBoardView extends StatelessWidget {
@@ -16,7 +17,15 @@ class DashBoardView extends StatelessWidget {
             flex: 2,
             child: Column(
               children: [
-                Expanded(child: AllExpanses()),
+                Expanded(
+                    child: AllExpanses(
+                  itemModel: AllExpensesItemModel(
+                    image: 'assets/images/image.jpg',
+                    title: 'Imcome',
+                    date: 'April 2022',
+                    price: r'$20,129',
+                  ),
+                )),
               ],
             ),
           ),

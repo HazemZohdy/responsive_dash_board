@@ -28,24 +28,25 @@ class _LIstViewWidgetState extends State<LIstViewWidget> {
   @override
   Widget build(BuildContext context) {
     return SliverList.builder(
-        itemCount:item.length,
-        itemBuilder:(context, index) {
-          return GestureDetector(
-            onTap: (){
-              if (changeItem != index) {
-                setState(() {
-                  changeItem = index;
-                });
-              }
-            },
-            child: Padding(
-              padding: const EdgeInsets.only(top: 20),
-              child: CustomDrawerItem(
-                drawerItemModel: item[index],
-                isActive: changeItem == index,
-              ),
+      itemCount: item.length,
+      itemBuilder: (context, index) {
+        return GestureDetector(
+          onTap: () {
+            if (changeItem != index) {
+              setState(() {
+                changeItem = index;
+              });
+            }
+          },
+          child: Padding(
+            padding: const EdgeInsets.only(top: 20),
+            child: CustomDrawerItem(
+              drawerItemModel: item[index],
+              isActive: changeItem == index,
             ),
-          );
-        },);
+          ),
+        );
+      },
+    );
   }
 }
