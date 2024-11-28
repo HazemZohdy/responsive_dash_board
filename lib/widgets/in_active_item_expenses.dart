@@ -6,11 +6,11 @@ class InActiveItemExpenses extends StatelessWidget {
   const InActiveItemExpenses({
     super.key,
     required this.itemModel,
-    required this.isSelect,
+     
   });
 
   final AllExpensesItemModel itemModel;
-  final bool isSelect;
+  
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -61,11 +61,11 @@ class ActiveItemExpenses extends StatelessWidget {
   const ActiveItemExpenses({
     super.key,
     required this.itemModel,
-    required this.isSelect,
+    
   });
 
   final AllExpensesItemModel itemModel;
-  final bool isSelect;
+ 
   @override
   Widget build(BuildContext context) {
     return Container(

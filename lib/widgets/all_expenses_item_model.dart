@@ -2,7 +2,7 @@ class AllExpensesItemModel {
   final String image, title, date,price;
  
 
-  const AllExpensesItemModel({
+    const AllExpensesItemModel({
     required this.image,
     required this.title,
     required this.date,

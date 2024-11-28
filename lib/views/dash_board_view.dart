@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dash_board/widgets/all_expanses.dart';
-import 'package:responsive_dash_board/widgets/all_expenses_item_model.dart';
+import 'package:responsive_dash_board/widgets/quick_invove.dart';
+
+import '../widgets/all_expanses.dart';
+import '../widgets/all_expenses_item_model.dart';
 import '../widgets/custom_drawer.dart';
 
 class DashBoardView extends StatelessWidget {
@@ -26,6 +28,7 @@ class DashBoardView extends StatelessWidget {
                     price: r'$20,129',
                   ),
                 )),
+                Expanded(child: QuickInvove()),
               ],
             ),
           ),
