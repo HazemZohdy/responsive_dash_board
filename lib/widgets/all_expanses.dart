@@ -35,6 +35,7 @@ class CustomItemExpanses extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           CustomWidgetHeader(),
+          SizedBox(height: 12),
           AllExpensesListViewItem(),
         ],
       ),

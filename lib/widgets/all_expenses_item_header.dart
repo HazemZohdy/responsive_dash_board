@@ -1,8 +1,14 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 
 class AllExpensesItemHeader extends StatelessWidget {
-  const AllExpensesItemHeader({super.key, required this.image});
- final String image;
+  const AllExpensesItemHeader({
+    super.key,
+    required this.image,
+    this.color,
+  });
+  final String image;
+  final Color? color;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -10,11 +16,11 @@ class AllExpensesItemHeader extends StatelessWidget {
         Container(
           height: 60,
           width: 60,
-          decoration: const ShapeDecoration(
-            shape: OvalBorder(),
-            color: Colors.white,
+          decoration:   ShapeDecoration(
+            shape:const OvalBorder(),
+            color: color ?? Colors.grey,
           ),
-          child:Image.asset(image),
+          child: Image.asset(image),
         ),
       ],
     );
