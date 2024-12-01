@@ -10,7 +10,7 @@ class CustomWidgetHeader extends StatelessWidget {
         const Text(
           'All Expenses',
           style: TextStyle(
-            fontSize: 25,
+            fontSize: 19,
             fontWeight: FontWeight.bold,
             color: Colors.blue,
           ),
@@ -22,7 +22,6 @@ class CustomWidgetHeader extends StatelessWidget {
             color: Colors.grey,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(12),
-              
             ),
           ),
           child: Row(
@@ -30,7 +29,7 @@ class CustomWidgetHeader extends StatelessWidget {
               const Text(
                 'Monthly',
                 style: TextStyle(
-                  fontSize: 16,
+                  fontSize: 13,
                 ),
               ),
               const SizedBox(width: 12),
@@ -38,7 +37,7 @@ class CustomWidgetHeader extends StatelessWidget {
                 angle: -1.571,
                 child: const Icon(
                   Icons.arrow_back_ios_new_outlined,
-                  size: 20,
+                  size: 14,
                 ),
               ),
             ],

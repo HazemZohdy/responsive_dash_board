@@ -1,32 +1,34 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dash_board/models/custom_list_tile_model.dart';
 
 class CustomListTile extends StatelessWidget {
   const CustomListTile({
     super.key,
-    required this.image,
-    required this.title,
-    required this.subTitle,
+    required this.customListTileModel,
   });
-  final String image, title, subTitle;
+
+  final CustomListTileModel customListTileModel;
   @override
   Widget build(BuildContext context) {
     return Card(
       elevation: 0,
-      color: Colors.white,
-      child: ListTile(
-        leading: Image.asset(image),
-        title: Text(
-          title,
-          style: const TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.bold,
+      color: Colors.grey.withOpacity(.28),
+      child: Center(
+        child: ListTile(
+          leading: Image.asset(customListTileModel.image),
+          title: Text(
+            customListTileModel.title,
+            style: const TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.bold,
+            ),
           ),
-        ),
-        subtitle: Text(
-          subTitle,
-          style: const TextStyle(
-            fontSize: 12,
-            color: Colors.grey,
+          subtitle: Text(
+            customListTileModel.subTile,
+            style: const TextStyle(
+              fontSize: 12,
+              color: Colors.grey,
+            ),
           ),
         ),
       ),

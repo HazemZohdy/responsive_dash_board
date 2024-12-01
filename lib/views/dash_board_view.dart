@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dash_board/widgets/quick_invove.dart';
-
-import '../widgets/all_expanses.dart';
-import '../widgets/all_expenses_item_model.dart';
+import '../widgets/all_expenses_and_invoice_section.dart';
 import '../widgets/custom_drawer.dart';
 
 class DashBoardView extends StatelessWidget {
@@ -14,23 +11,10 @@ class DashBoardView extends StatelessWidget {
       body: Row(
         children: [
           Expanded(child: CustomDrawer()),
-          SizedBox(width: 16),
+          SizedBox(width: 32),
           Expanded(
             flex: 2,
-            child: Column(
-              children: [
-                Expanded(
-                    child: AllExpanses(
-                  itemModel: AllExpensesItemModel(
-                    image: 'assets/images/image.jpg',
-                    title: 'Imcome',
-                    date: 'April 2022',
-                    price: r'$20,129',
-                  ),
-                )),
-                Expanded(child: QuickInvove()),
-              ],
-            ),
+            child: AllExpensesAndInvoiceSection(),
           ),
         ],
       ),
