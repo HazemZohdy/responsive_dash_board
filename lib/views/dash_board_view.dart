@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dash_board/widgets/my_card_section.dart';
+import 'package:responsive_dash_board/widgets/my_card_section_&_transaction_section.dart';
+import 'package:responsive_dash_board/widgets/transaction_hestory.dart';
 import '../widgets/all_expenses_and_invoice_section.dart';
 import '../widgets/custom_drawer.dart';
 
@@ -19,7 +20,7 @@ class DashBoardView extends StatelessWidget {
           ),
           SizedBox(width: 24),
           Expanded(
-            child: MyCardSection(),
+            child: MyCardSectionAndTransactionSection(),
           ),
         ],
       ),

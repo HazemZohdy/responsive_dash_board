@@ -13,7 +13,7 @@ class CustomCardDot extends StatelessWidget {
           color: isActive ? Colors.blue : Colors.grey,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(12),
-          )),
+          ),),
     );
   }
 }
