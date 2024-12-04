@@ -1,8 +1,7 @@
- import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/widgets/quick_invove.dart';
-
 import 'all_expanses.dart';
-import 'all_expenses_item_model.dart';
+import '../models/all_expenses_item_model.dart';
 
 class AllExpensesAndInvoiceSection extends StatelessWidget {
   const AllExpensesAndInvoiceSection({
@@ -13,7 +12,6 @@ class AllExpensesAndInvoiceSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Column(
       children: [
-        SizedBox(height: 24),
         AllExpanses(
           itemModel: AllExpensesItemModel(
             image: 'assets/images/image.jpg',

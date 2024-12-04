@@ -27,12 +27,8 @@ class TransactionItemListView extends StatelessWidget {
   ];
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      itemCount: item.length,
-      shrinkWrap: true,
-      itemBuilder: (context, index) {
-        return TransactionItem(transactionModel: item[index]);
-      },
+    return Column(
+      children: item.map((e) => TransactionItem(transactionModel: e)).toList(),
     );
   }
 }

@@ -16,7 +16,7 @@ class TransactionItem extends StatelessWidget {
         title: Text(
           transactionModel.title,
           style: const TextStyle(
-            fontSize: 18,
+            fontSize: 16,
             fontWeight: FontWeight.bold,
             color: Colors.blueAccent,
           ),
@@ -24,14 +24,14 @@ class TransactionItem extends StatelessWidget {
         subtitle: Text(
           transactionModel.subtitle,
           style: const TextStyle(
-            fontSize: 16,
+            fontSize: 14,
             color: Colors.grey,
           ),
         ),
         trailing: Text(
           transactionModel.amount,
           style: const TextStyle(
-            fontSize: 18,
+            fontSize: 16,
             fontWeight: FontWeight.bold,
           ).copyWith(
             color: transactionModel.isDrawal ? Colors.redAccent : Colors.green,

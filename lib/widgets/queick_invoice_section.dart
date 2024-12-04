@@ -1,4 +1,4 @@
- import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/widgets/custom_bottom.dart';
 
 import 'custom_title_text_feild.dart';
@@ -9,7 +9,20 @@ class CustomQueickIncoiceSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Column(
+      
       children: [
+        Row(
+          children: [
+            Expanded(
+                child:
+                    CsutomTitleTextFeild(title: 'Customer name', hint: 'Name')),
+            SizedBox(width: 12),
+            Expanded(
+              child: CsutomTitleTextFeild(
+                  title: 'Customer Email', hint: 'Type customer email'),
+            ),
+          ],
+        ),
         Row(
           children: [
             Expanded(

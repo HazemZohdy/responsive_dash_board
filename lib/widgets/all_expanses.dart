@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/widgets/Custom_widget_header.dart';
-import 'package:responsive_dash_board/widgets/all_expenses_item_model.dart';
-
+import 'package:responsive_dash_board/models/all_expenses_item_model.dart';
 import 'all_expenses_list_view_item.dart';
 import 'custom_background_container.dart';
 
@@ -28,7 +27,9 @@ class CustomItemExpanses extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          CustomWidgetHeader(),
+          CustomWidgetHeader(
+            title: 'All Expenses',
+          ),
           SizedBox(height: 12),
           AllExpensesListViewItem(),
         ],

@@ -10,47 +10,51 @@ class CustomDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomScrollView(
-      slivers: [
-        const SliverToBoxAdapter(
-          child: CustomListTile(
-            customListTileModel: CustomListTileModel(
-              image: 'assets/images/image.jpg',
-              title: 'Lekan Okeowo',
-              subTile: 'demo@gmail.com',
+    return Container(
+      width: MediaQuery.sizeOf(context).width * .7,
+      color: Colors.white,
+      child: CustomScrollView(
+        slivers:[
+          const SliverToBoxAdapter(
+            child: CustomListTile(
+              customListTileModel: CustomListTileModel(
+                image: 'assets/images/image.jpg',
+                title: 'Lekan Okeowo',
+                subTile: 'demo@gmail.com',
+              ),
             ),
           ),
-        ),
-        const SliverToBoxAdapter(
-          child: SizedBox(height: 8),
-        ),
-        const LIstViewWidget(),
-        const SliverFillRemaining(
-          hasScrollBody: false,
-          child: Column(
-            children: [
-              Expanded(
-                  child: SizedBox(
-                height: 20,
-              )),
-            ],
+          const SliverToBoxAdapter(
+            child: SizedBox(height: 8),
           ),
-        ),
-        SliverToBoxAdapter(
+          const LIstViewWidget(),
+          const SliverFillRemaining(
+            hasScrollBody: false,
             child: Column(
-          children: [
-            InActiveWidget(
-              drawerItemModel: DrawerItemModel(
-                  image: 'assets/images/fff.jpg', title: 'Setting'),
+              children: [
+                Expanded(
+                    child: SizedBox(
+                  height: 20,
+                )),
+              ],
             ),
-            InActiveWidget(
-              drawerItemModel: DrawerItemModel(
-                  image: 'assets/images/image.jpg', title: 'Profile'),
-            ),
-            const SizedBox(height: 40),
-          ],
-        )),
-      ],
+          ),
+          SliverToBoxAdapter(
+              child: Column(
+            children: [
+              InActiveWidget(
+                drawerItemModel: DrawerItemModel(
+                    image: 'assets/images/fff.jpg', title: 'Setting'),
+              ),
+              InActiveWidget(
+                drawerItemModel: DrawerItemModel(
+                    image: 'assets/images/image.jpg', title: 'Profile'),
+              ),
+              const SizedBox(height: 40),
+            ],
+          )),
+        ],
+      ),
     );
   }
 }

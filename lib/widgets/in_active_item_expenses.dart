@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'all_expenses_item_header.dart';
-import 'all_expenses_item_model.dart';
+import '../models/all_expenses_item_model.dart';
 
 class InActiveItemExpenses extends StatelessWidget {
   const InActiveItemExpenses({

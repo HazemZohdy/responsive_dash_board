@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 
 class CustomWidgetHeader extends StatelessWidget {
-  const CustomWidgetHeader({super.key});
-
+  const CustomWidgetHeader({super.key, required this.title,});
+  final String title;
+  
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
-        const Text(
-          'All Expenses',
-          style: TextStyle(
+          Text(
+          title,
+          style: const TextStyle(
             fontSize: 19,
             fontWeight: FontWeight.bold,
             color: Colors.blue,
@@ -26,7 +27,7 @@ class CustomWidgetHeader extends StatelessWidget {
           ),
           child: Row(
             children: [
-              const Text(
+               const Text(
                 'Monthly',
                 style: TextStyle(
                   fontSize: 13,
