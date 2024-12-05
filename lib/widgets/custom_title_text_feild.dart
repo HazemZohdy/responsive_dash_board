@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:responsive_dash_board/widgets/custom_text_feild.dart';
 
+import '../utils/styles.dart';
+
 class CsutomTitleTextFeild extends StatelessWidget {
   const CsutomTitleTextFeild({super.key, required this.title, required this.hint});
   final String title, hint;
@@ -11,9 +13,7 @@ class CsutomTitleTextFeild extends StatelessWidget {
       children: [
         Text(
          title,
-          style:const TextStyle(
-            fontSize: 18,
-          ),
+          style:AppStyles.styleMedium20(context),
         ),
        const SizedBox(height: 12),
         CustomTextFeild(

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../utils/styles.dart';
+
 class QuickInvoiceHeader extends StatelessWidget {
   const QuickInvoiceHeader({super.key});
 
@@ -7,13 +9,9 @@ class QuickInvoiceHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        const Text(
+          Text(
           'Quick Incoice',
-          style: TextStyle(
-            fontSize: 18,
-            fontWeight: FontWeight.bold,
-            color: Color(0xff064061),
-          ),
+          style: AppStyles.styleMedium20(context),
         ),
         const Spacer(),
         IconButton(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../models/imcome_item_model.dart';
+import '../utils/styles.dart';
 
 class IncomeItem extends StatelessWidget {
   const IncomeItem({super.key, required this.incomeDetailsModel});
@@ -18,19 +19,11 @@ class IncomeItem extends StatelessWidget {
       ),
       title: Text(
         incomeDetailsModel.title,
-        style: const TextStyle(
-          fontSize: 16,
-          fontWeight: FontWeight.bold,
-          color: Colors.blueGrey,
-        ),
+        style:AppStyles.styleBold16(context),
       ),
       trailing: Text(
         incomeDetailsModel.value,
-        style: const TextStyle(
-          fontSize: 16,
-          fontWeight: FontWeight.bold,
-          color: Colors.blue,
-        ),
+        style: AppStyles.styleBold16(context),
       ),
     );
   }

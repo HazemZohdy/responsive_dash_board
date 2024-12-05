@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/models/transaction_item_model.dart';
 
+import '../utils/styles.dart';
+
 class TransactionItem extends StatelessWidget {
   const TransactionItem({super.key, required this.transactionModel});
   final TransactionModel transactionModel;
@@ -15,25 +17,15 @@ class TransactionItem extends StatelessWidget {
       child: ListTile(
         title: Text(
           transactionModel.title,
-          style: const TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.bold,
-            color: Colors.blueAccent,
-          ),
+          style: AppStyles.styleMedium20(context),
         ),
         subtitle: Text(
           transactionModel.subtitle,
-          style: const TextStyle(
-            fontSize: 14,
-            color: Colors.grey,
-          ),
+          style: AppStyles.styleBold16(context),
         ),
         trailing: Text(
           transactionModel.amount,
-          style: const TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.bold,
-          ).copyWith(
+          style: AppStyles.styleMedium20(context).copyWith(
             color: transactionModel.isDrawal ? Colors.redAccent : Colors.green,
           ),
         ),

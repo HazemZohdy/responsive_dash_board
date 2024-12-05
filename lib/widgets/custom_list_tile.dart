@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/models/custom_list_tile_model.dart';
 
+import '../utils/styles.dart';
+
 class CustomListTile extends StatelessWidget {
   const CustomListTile({
     super.key,
@@ -25,10 +27,7 @@ class CustomListTile extends StatelessWidget {
           ),
           subtitle: Text(
             customListTileModel.subTile,
-            style: const TextStyle(
-              fontSize: 12,
-              color: Colors.grey,
-            ),
+            style: AppStyles.styleBold16(context),
           ),
         ),
       ),

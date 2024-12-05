@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dash_board/utils/styles.dart';
 
 class TransactionHeaderHestory extends StatelessWidget {
   const TransactionHeaderHestory({
@@ -7,26 +8,18 @@ class TransactionHeaderHestory extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.only(top: 12, right: 12),
+    return   Padding(
+      padding: const EdgeInsets.only(top: 12, right: 12),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
             'Transaction History',
-            style: TextStyle(
-              fontSize: 22,
-              fontWeight: FontWeight.bold,
-              color: Color(0xff064061),
-            ),
+            style: AppStyles.styleSemiBold20(context)
           ),
-          Text(
+            Text(
             'See all',
-            style: TextStyle(
-              fontSize: 15,
-              fontWeight: FontWeight.bold,
-              color: Colors.blue,
-            ),
+            style: AppStyles.styleBold16(context),
           ),
         ],
       ),

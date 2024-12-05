@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dash_board/utils/styles.dart';
 import 'all_expenses_item_header.dart';
 import '../models/all_expenses_item_model.dart';
 
@@ -6,11 +7,10 @@ class InActiveItemExpenses extends StatelessWidget {
   const InActiveItemExpenses({
     super.key,
     required this.itemModel,
-     
   });
 
   final AllExpensesItemModel itemModel;
-  
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -31,25 +31,15 @@ class InActiveItemExpenses extends StatelessWidget {
           const SizedBox(height: 34),
           Text(
             itemModel.title,
-            style: const TextStyle(
-              fontSize: 22,
-              fontWeight: FontWeight.bold,
-              color: Colors.black,
-            ),
+            style: AppStyles.styleBold16(context),
           ),
           Text(
             itemModel.date,
-            style: const TextStyle(
-              color: Colors.grey,
-              fontSize: 16,
-            ),
+            style: AppStyles.styleRegular14(context),
           ),
           Text(
             itemModel.price,
-            style: const TextStyle(
-              color: Colors.blue,
-              fontSize: 28,
-            ),
+            style: AppStyles.styleSemiBold24(context),
           ),
         ],
       ),
@@ -61,11 +51,10 @@ class ActiveItemExpenses extends StatelessWidget {
   const ActiveItemExpenses({
     super.key,
     required this.itemModel,
-    
   });
 
   final AllExpensesItemModel itemModel;
- 
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -87,25 +76,15 @@ class ActiveItemExpenses extends StatelessWidget {
           const SizedBox(height: 34),
           Text(
             itemModel.title,
-            style: const TextStyle(
-              fontSize: 22,
-              fontWeight: FontWeight.bold,
-              color: Colors.white,
-            ),
+            style:AppStyles.styleBold16(context),
           ),
           Text(
             itemModel.date,
-            style: const TextStyle(
-              color: Colors.white,
-              fontSize: 16,
-            ),
+            style: AppStyles.styleRegular14(context),
           ),
           Text(
             itemModel.price,
-            style: const TextStyle(
-              color: Colors.white,
-              fontSize: 24,
-            ),
+            style: AppStyles.styleSemiBold24(context),
           ),
         ],
       ),

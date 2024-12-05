@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../utils/styles.dart';
+
 class CustomWidgetHeader extends StatelessWidget {
   const CustomWidgetHeader({super.key, required this.title,});
   final String title;
@@ -10,11 +12,7 @@ class CustomWidgetHeader extends StatelessWidget {
       children: [
           Text(
           title,
-          style: const TextStyle(
-            fontSize: 19,
-            fontWeight: FontWeight.bold,
-            color: Colors.blue,
-          ),
+          style: AppStyles.styleMedium20(context),
         ),
         const Expanded(child: SizedBox()),
         Container(
@@ -27,11 +25,9 @@ class CustomWidgetHeader extends StatelessWidget {
           ),
           child: Row(
             children: [
-               const Text(
+                 Text(
                 'Monthly',
-                style: TextStyle(
-                  fontSize: 13,
-                ),
+                style:AppStyles.styleBold16(context),
               ),
               const SizedBox(width: 12),
               Transform.rotate(

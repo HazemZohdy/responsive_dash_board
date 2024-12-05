@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/models/drawer_item_model.dart';
 
+import '../utils/styles.dart';
+
 class CustomDrawerItem extends StatelessWidget {
   const CustomDrawerItem(
       {super.key, required this.drawerItemModel, required this.isActive});
@@ -49,10 +51,7 @@ class ActiveWidget extends StatelessWidget {
       leading: Image.asset(drawerItemModel.image),
       title: Text(
         drawerItemModel.title,
-        style: const TextStyle(
-          fontSize: 16,
-          color: Colors.blue,
-        ),
+        style: AppStyles.styleMedium20(context),
       ),
       trailing: Container(
         width: 3.2,

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/widgets/custom_dot_Inducator.dart';
 import 'package:responsive_dash_board/widgets/my_card_page_view.dart';
 
+import '../utils/styles.dart';
+
 class MyCardSection extends StatefulWidget {
   const MyCardSection({super.key});
 
@@ -27,15 +29,11 @@ class _MyCardSectionState extends State<MyCardSection> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const SizedBox(
+          SizedBox(
           width: 420,
           child: Text(
             'MyCard',
-            style: TextStyle(
-              fontSize: 22,
-              fontWeight: FontWeight.bold,
-              color: Colors.blueAccent,
-            ),
+            style: AppStyles.styleMedium20(context),
           ),
         ),
         MyCardPageView(

@@ -1,5 +1,7 @@
  import 'package:flutter/material.dart';
 
+import '../utils/styles.dart';
+
 class MyCard extends StatelessWidget {
   const MyCard({super.key});
 
@@ -17,54 +19,42 @@ class MyCard extends StatelessWidget {
             borderRadius: BorderRadius.circular(16),
           ),
         ),
-        child: const Column(
+        child:   Column(
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             ListTile(
               title: Text(
                 'Name card',
-                style: TextStyle(
-                  fontSize: 16,
-                  color: Colors.white,
-                ),
+                style: AppStyles.styleBold16(context),
               ),
               subtitle: Text(
                 'Syah Bandi',
-                style: TextStyle(
-                  fontSize: 22,
-                  color: Colors.white,
-                ),
+                style: AppStyles.styleMedium20(context),
               ),
-              trailing: Image(
+              trailing: const Image(
                 image: AssetImage('assets/images/gallery.png'),
               ),
             ),
-            Expanded(
+            const Expanded(
               child: SizedBox(),
             ),
             Padding(
-              padding: EdgeInsets.only(right: 24),
+              padding: const EdgeInsets.only(right: 24),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   Text(
                     '0918 8124 0042 8129',
-                    style: TextStyle(
-                      fontSize: 20,
-                      color: Colors.white,
-                    ),
+                    style: AppStyles.styleSemiBold24(context),
                   ),
                   Text(
                     '12/20 - 124',
-                    style: TextStyle(
-                      fontSize: 16,
-                      color: Colors.white,
-                    ),
+                    style: AppStyles.styleSemiBold16(context),
                   ),
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 18,
             ),
           ],

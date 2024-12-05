@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dash_board/utils/styles.dart';
 
 class CustomButttom extends StatelessWidget {
   const CustomButttom({super.key, this.backgroundColor, this.textColor, required this.text});
@@ -19,10 +20,7 @@ class CustomButttom extends StatelessWidget {
         onPressed: () {},
         child: Text(
           text,
-          style: TextStyle(
-            fontSize: 16,
-            color: textColor ?? Colors.white,
-          ),
+          style: AppStyles.styleSemiBold18(context),
         ),
       ),
     );
